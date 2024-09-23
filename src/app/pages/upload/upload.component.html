@@ -1,0 +1,57 @@
+<div class="container">
+  <!-- Dropdowns and Add New Client -->
+  <div class="header-section">
+    <select class="dropdown">
+      <option>Position Name</option>
+      <!-- Add your options here -->
+    </select>
+
+    <select class="dropdown">
+      <option>Client Name</option>
+      <!-- Add your options here -->
+    </select>
+
+    <div class="add-client">
+      <input type="text" placeholder="Add New Client" class="add-client-input" />
+      <button class="add-button">ADD</button>
+    </div>
+  </div>
+
+  <!-- File Upload Section -->
+  <div class="upload-section">
+    <div class="upload-card">
+      <div class="upload-icon">
+        <i class="bi bi-file-earmark-text" style="font-size: 60px;"></i> <!-- Icon for JD -->
+      </div>
+      <p>Upload JD</p>
+      <input type="file" id="upload-jd" class="file-upload" accept=".pdf,.doc,.docx" />
+    </div>
+    <div class="upload-card">
+      <div class="upload-icon">
+        <i class="bi bi-file-earmark-person" style="font-size: 60px;"></i> <!-- Icon for Resume -->
+      </div>
+      <p>Upload Resume</p>
+      <input type="file" id="upload-resume" class="file-upload" accept=".pdf,.doc,.docx" />
+    </div>
+  </div>
+
+  <!-- Rank Resumes Button -->
+  <div class="rank-button-section">
+    <button class="rank-button">Rank Resumes</button>
+  </div>
+</div>
+
+<!-- Optional JS for handling file selection -->
+<script>
+  document.getElementById('upload-jd').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    console.log('JD file selected:', file);
+    // You can add file upload logic here
+  });
+
+  document.getElementById('upload-resume').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    console.log('Resume file selected:', file);
+    // You can add file upload logic here
+  });
+</script>

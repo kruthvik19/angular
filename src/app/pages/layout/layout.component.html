@@ -1,0 +1,71 @@
+<!-- Full Container for Sidebar and Main Content -->
+<div class="d-flex">
+    <!-- Sidebar -->
+    <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark vh-100" style="width: 250px; position: fixed;">
+      <!-- HR Hub Logo -->
+      <a href="/" class="d-flex align-items-center mb-3 text-white text-decoration-none">
+        <img src="assets/subhanu_logo.jpg" alt="HR Hub Logo" style="width: 40px; height: 40px; margin-right: 10px;">
+        <span class="fs-4 fw-bold">HR Hub</span>
+      </a>
+      <hr>
+  
+      <!-- Sidebar Menu -->
+      <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+          <a routerLink="/home" class="nav-link text-white d-flex align-items-center">
+            <i class="bi bi-house-door me-3"></i> Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/upload" class="nav-link text-white d-flex align-items-center">
+            <i class="bi bi-cloud-arrow-up me-3"></i> Upload
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/ranker" class="nav-link text-white d-flex align-items-center">
+            <i class="bi bi-graph-up-arrow me-3"></i> Ranker
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/report" class="nav-link text-white d-flex align-items-center">
+            <i class="bi bi-file-earmark-bar-graph me-3"></i> Report
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/resume" class="nav-link text-white d-flex align-items-center">
+            <i class="bi bi-person-lines-fill me-3"></i> Resume
+          </a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="/dashboard" class="nav-link text-white d-flex align-items-center">
+              <i class="bi bi-person-lines-fill me-3"></i> Dashboard
+            </a>
+          </li>
+      </ul>
+      
+      <hr>
+  
+      <!-- User Logo in Sidebar (Ensure path is correct) -->
+      <div class="d-flex align-items-center mt-auto">
+        <img src="assets/user_logo.jpg" alt="User Icon" class="rounded-circle" style="width: 40px; height: 40px; margin-right: 10px;">
+        <span>Kruthvik</span>
+      </div>
+    </div>
+  
+    <!-- Main Content Area -->
+    <div class="flex-grow-1" style="margin-left: 250px; width: calc(100% - 250px);">
+      <!-- Full-Width Horizontal Navbar -->
+      <div class="d-flex justify-content-end align-items-center p-3 bg-dark text-white" style="min-height: 90px; width: 100%; position: fixed; top: 0; left: 250px; z-index: 1000;">
+        <img src="assets/user_logo.jpg" alt="User Icon" class="rounded-circle" style="width: 40px; height: 40px;">
+      </div>
+  
+      <!-- Router Outlet for Angular Pages -->
+      <div class="p-4 mt-5" style="padding-top: 100px;">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Add any Bootstrap Icons or Custom Icons here -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  

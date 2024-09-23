@@ -1,0 +1,87 @@
+<div class="report-container">
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <span class="report-title">Report</span>
+    <div class="search-box">
+      <input type="text" placeholder="Search..." id="searchInput" />
+      <i class="bi bi-search"></i>
+    </div>
+  </div>
+
+  <!-- Table Container -->
+  <div class="table-container">
+    <table class="report-table">
+      <thead>
+        <tr>
+          <th>SR.No</th>
+          <th>Position Name</th>
+          <th>Pending Position</th>
+        </tr>
+      </thead>
+      <tbody id="reportTableBody">
+        <!-- Table rows will be generated dynamically by JavaScript -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Export Button -->
+  <div class="export-button">
+    <button onclick="exportTableToCSV()">Export</button>
+  </div>
+</div>
+
+<script>
+  // Dummy Report Data
+  const reportData = [
+    { positionName: "Developer", pendingPosition: 3 },
+    { positionName: "HR Manager", pendingPosition: 2 },
+    { positionName: "Sales Executive", pendingPosition: 1 }
+  ];
+
+  // Function to render report data into the table
+  function renderReportData() {
+    const tableBody = document.getElementById("reportTableBody");
+    tableBody.innerHTML = ""; // Clear existing rows
+    
+    reportData.forEach((item, index) => {
+      const row = document.createElement("tr");
+
+      // Add row cells
+      const srNoCell = document.createElement("td");
+      srNoCell.textContent = index + 1;
+
+      const positionCell = document.createElement("td");
+      positionCell.textContent = item.positionName;
+
+      const pendingCell = document.createElement("td");
+      pendingCell.textContent = item.pendingPosition;
+
+      // Append cells to the row
+      row.appendChild(srNoCell);
+      row.appendChild(positionCell);
+      row.appendChild(pendingCell);
+
+      // Append row to table body
+      tableBody.appendChild(row);
+    });
+
+    // Add empty rows for visual balance
+    for (let i = 0; i < 4; i++) {
+      const emptyRow = document.createElement("tr");
+      for (let j = 0; j < 3; j++) {
+        const emptyCell = document.createElement("td");
+        emptyRow.appendChild(emptyCell);
+      }
+      tableBody.appendChild(emptyRow);
+    }
+  }
+
+  // Call render function to load data on page load
+  document.addEventListener("DOMContentLoaded", renderReportData);
+
+  // Export Table to CSV Function (Placeholder)
+  function exportTableToCSV() {
+    alert("Export functionality not implemented.");
+    // Add logic here for exporting the table as CSV.
+  }
+</script>

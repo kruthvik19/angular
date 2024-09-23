@@ -1,0 +1,90 @@
+/* Overall body styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Light background for contrast */
+}
+
+/* Sidebar styling */
+.sidebar {
+    background: linear-gradient(135deg, #343a40, #495057); /* Gradient background */
+    color: white; /* White text */
+    width: 250px;
+    position: fixed;
+    height: 100vh; /* Full height */
+    padding: 1rem; /* Padding for content */
+}
+
+/* Logo styling */
+.sidebar a {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem; /* Spacing between logo and menu */
+    text-decoration: none; /* Remove underline */
+    color: white; /* Logo text color */
+}
+
+.sidebar img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px; /* Space between logo and text */
+}
+
+/* Navigation menu styling */
+.nav-item {
+    margin-bottom: 0.5rem; /* Spacing between menu items */
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px; /* Padding for links */
+    color: white; /* Link color */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+.nav-link i {
+    margin-right: 10px; /* Space between icon and text */
+}
+
+/* Hover effect for links */
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Light hover effect */
+    border-left: 4px solid #f16643; /* Highlight left border */
+    transform: scale(1.05); /* Slightly scale on hover */
+}
+
+/* Main content area styling */
+.main-content {
+    margin-left: 250px; /* Space for sidebar */
+    padding: 1rem; /* Padding for content */
+}
+
+/* Top navbar styling */
+.top-navbar {
+    background-color: #343a40; /* Dark background */
+    color: white; /* White text */
+    min-height: 70px; /* Minimum height */
+    position: fixed;
+    top: 0;
+    left: 250px; /* Align with sidebar */
+    right: 0; /* Extend to the right */
+    z-index: 1000; /* Ensure it stays on top */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align items to the right */
+    padding: 0 1rem; /* Padding */
+}
+
+/* User icon styling */
+.user-icon {
+    border-radius: 50%; /* Circular user icon */
+    width: 40px;
+    height: 40px;
+}
+
+/* Content area styling */
+.content {
+    padding-top: 100px; /* Space for fixed top navbar */
+    padding: 1rem; /* General padding */
+}

@@ -1,0 +1,20 @@
+<div class="parent">
+    <div class="container">
+        <div class="login">
+            <h2>Login</h2>
+            <form action="#">
+                <input type="email" required name="userName" [(ngModel)]="loginobj.userName" placeholder="Email">
+                <input type="password" required name="password"   [(ngModel)]="loginobj.password" placeholder="Password">
+                <div class="options">
+                    <input type="checkbox">
+                    <label for="remember">Remember me!</label>
+                    <a href="#">Forgot password?</a>
+                </div>
+                <button (click)="onLogin()">Login</button>
+                <p>Don't have an account?<br><a href="#">Register</a></p>
+            </form>
+        </div>
+    </div>
+    
+
+</div>

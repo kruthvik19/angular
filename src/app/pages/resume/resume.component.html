@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="header">
+    <button routerLink="/upload" class="tab-button" [class.active]="activeTab === 'resume-summary'" (click)="setActiveTab('resume-summary')">Resume Summary</button>
+    <button class="tab-button" [class.active]="activeTab === 'resume'" (click)="setActiveTab('resume')">Resume</button>
+    <button class="tab-button" [class.active]="activeTab === 'questions'" (click)="setActiveTab('questions')">Questions</button>
+  </div>
+
+  <div class="tab-content resume-summary" *ngIf="activeTab === 'resume-summary'">
+    <h2>Resume Summary</h2>
+    <div class="progress-circle">
+      <span class="progress-value">55%</span>
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+  </div>
+
+  <div class="tab-content resume" *ngIf="activeTab === 'resume'">
+    <h2>Resume Content</h2>
+    <p>
+      Here you can display the resume details or upload functionality.
+    </p>
+  </div>
+
+  <div class="tab-content questions" *ngIf="activeTab === 'questions'">
+    <h2>Interview Questions</h2>
+    <p>
+      Here you can list potential interview questions.
+    </p>
+  </div>
+
+  <div class="keywords-section">
+    <h3>Found Keywords</h3>
+    <h3>Missing Keywords</h3>
+    <div class="keywords">
+      <span>Skills</span>
+      <div class="rating-icons">
+        <i class="icon">★</i>
+        <i class="icon">★</i>
+        <i class="icon">★</i>
+        <i class="icon">☆</i>
+        <i class="icon">☆</i>
+      </div>
+    </div>
+  </div>
+
+  <button class="interview-button">Selected for Interview</button>
+  <div class="p-4 mt-5" style="padding-top: 100px;">
+    <router-outlet></router-outlet>
+  </div>
+</div>

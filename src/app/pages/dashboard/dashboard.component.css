@@ -1,0 +1,130 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif; /* Use a clean, professional font */
+    margin: 0;
+    background-color: #f4f6f9; /* Light background for better contrast */
+    color: #333; /* Default text color */
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    padding: 20px;
+}
+
+/* Welcome Section */
+.welcome-section {
+    text-align: center;
+    background-color: #ffffff; /* White background for contrast */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 30px;
+}
+
+.welcome-section h1 {
+    font-size: 2.5rem; /* Slightly larger for emphasis */
+    margin-bottom: 10px;
+    color: #5a4ba2; /* Company primary color */
+}
+
+.welcome-section p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Stats Section */
+.stats-section {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* Responsive behavior */
+}
+
+.stat-card {
+    background-color: #ffffff; /* White background for cards */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1 1 30%; /* Responsive flexbox settings */
+    margin: 10px; /* Consistent margin */
+}
+
+.stat-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.stat-card p {
+    font-size: 2rem;
+    color: #5a4ba2; /* Company primary color */
+}
+
+/* Recent JDs Section */
+.recent-jds-section {
+    margin-top: 20px;
+}
+
+.recent-jds-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #5a4ba2; /* Company primary color */
+}
+
+/* JDs Table */
+.jds-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.jds-table th,
+.jds-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.jds-table th {
+    background-color: #f2f2f2; /* Light gray for headers */
+    font-weight: bold;
+}
+
+.jds-table td {
+    color: #555;
+}
+
+.jds-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Download Button */
+.download-btn {
+    background-color: #007bff; /* Primary button color */
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.download-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .stats-section {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+        align-items: center; /* Center align */
+    }
+    
+    .stat-card {
+        flex: 1 1 90%; /* Full width on smaller screens */
+    }
+}

@@ -1,0 +1,42 @@
+<div class="ranker-container">
+    <!-- Header Section -->
+    <h1 class="title">Resume Ranker</h1>
+    <p class="subtitle">
+      Choose JD and Resumes from Repos. Generate a ranked list of matching resumes.
+    </p>
+  
+    <!-- Dropdowns and Top Resume Selector -->
+    <div class="filter-section">
+      <select class="dropdown">
+        <option>Client Name</option>
+        <!-- Add your client options here -->
+      </select>
+  
+      <select class="dropdown">
+        <option>Position Name</option>
+        <!-- Add your position options here -->
+      </select>
+  
+      <div class="top-resume-filter">
+        <label for="top-resume">Top Resume:</label>
+        <input type="number" id="top-resume" class="top-resume-input" value="5" />
+      </div>
+    </div>
+  
+    <!-- Matching Results Section -->
+    <h3 class="results-title">Matching results</h3>
+    <div class="results-section">
+      <div class="result-card" *ngFor="let result of results">
+        <div class="result-info">
+          <h4 class="name">{{ result.name }}</h4>
+          <p class="role">{{ result.role }}</p>
+          <p class="experience">{{ result.experience }} years</p>
+        </div>
+        <div class="progress-bar">
+          <div class="progress" [style.width.%]="result.matchPercentage"></div>
+        </div>
+        <span class="percentage">{{ result.matchPercentage }}%</span>
+      </div>
+    </div>
+  </div>
+  

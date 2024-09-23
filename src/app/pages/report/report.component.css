@@ -1,0 +1,78 @@
+.report-container {
+  background-color: #e1efff; /* light blue background */
+  padding: 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #c2c2c2; /* grey background */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.report-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  padding: 5px;
+  width: 200px;
+}
+
+.search-box i {
+  color: #888;
+}
+
+.table-container {
+  margin-top: 20px;
+}
+
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.report-table th, .report-table td {
+  border: 1px solid #ccc;
+  text-align: left;
+  padding: 10px;
+}
+
+.report-table th {
+  background-color: #f2f2f2;
+}
+
+.export-button {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.export-button button {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.export-button button:hover {
+  background-color: #555;
+}

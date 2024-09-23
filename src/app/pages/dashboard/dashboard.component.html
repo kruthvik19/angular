@@ -1,0 +1,48 @@
+<div class="dashboard-container">
+    <div class="welcome-section">
+      <h1>Welcome, Back Kruthvik <span>👋</span></h1>
+      <p>HR-Hub is optimizing hiring, rank resumes, track Candidates</p>
+    </div>
+  
+    <div class="stats-section">
+      <div class="stat-card">
+        <h3>Clients</h3>
+        <p>102</p>
+      </div>
+      <div class="stat-card">
+        <h3>Total Resumes</h3>
+        <p>200</p>
+      </div>
+      <div class="stat-card">
+        <h3>Total JDs</h3>
+        <p>70</p>
+      </div>
+    </div>
+  
+    <div class="recent-jds-section">
+      <h3>Recent JDs</h3>
+      <table class="jds-table">
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Role</th>
+            <th>Description</th>
+            <th>Time</th>
+            <th>JD Attached</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let jd of recentJds">
+            <td>{{ jd.company }}</td>
+            <td>{{ jd.role }}</td>
+            <td>{{ jd.description }}</td>
+            <td>{{ jd.time }}</td>
+            <td>
+              <button class="download-btn">Download JD</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
